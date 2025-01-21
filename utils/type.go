@@ -39,3 +39,11 @@ type Users struct {
 	Uid       string `json:"uid"`
 	Online    bool   `json:"online"`
 }
+
+type Message struct {
+	From     string
+	FromName string
+	To       string
+	Message  string
+	Date     string
+}
