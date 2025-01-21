@@ -1,6 +1,10 @@
 CREATE TABLE
     IF NOT EXISTS user (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
+        age INTEGER NOT NULL CHECK (age >= 18),
+        firsname TEXT NOT NULL,
+        lastname TEXT NOT NULL,
+        gender TEXT CHECK (gender IN ('male', 'female')) NOT NULL,
         username TEXT NOT NULL UNIQUE,
         email TEXT NOT NULL UNIQUE,
         passwd TEXT NOT NULL,

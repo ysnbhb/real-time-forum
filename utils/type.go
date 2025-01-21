@@ -41,9 +41,10 @@ type Users struct {
 }
 
 type Message struct {
-	From     string
-	FromName string
-	To       string
-	Message  string
-	Date     string
+	Type     string `json:"type"`
+	From     string `json:"from"`
+	FromName string `json:"FromName"`
+	To       string `json:"to"`
+	Message  string `json:"message"`
+	Date     string `json:"date"`
 }
